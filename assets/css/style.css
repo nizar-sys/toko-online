@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: #fff;
+  box-shadow: 0.3px 2px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease;
+  z-index: 999;
+}
+.navbar-container .navbar-logo {
+  position: relative;
+  margin: auto 0;
+  z-index: 999;
+}
+.navbar-container .navbar-logo:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 1px;
+  background-color: #4a1667;
+  border-radius: 10px;
+}
+.navbar-container .navbar-logo h3 a {
+  font-family: "Poppins";
+  font-weight: bold;
+  color: #4a1667;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar-container .navbar-box {
+  position: relative;
+  width: 40%;
+  transition: 0.5s;
+}
+.navbar-container .navbar-box .navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0;
+  list-style: none;
+}
+.navbar-container .navbar-box .navbar-list li {
+  position: relative;
+  text-align: center;
+  padding: 10px 13px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.navbar-container .navbar-box .navbar-list li a {
+  color: #4a1667;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: 0.5s;
+}
+.navbar-container .navbar-box .navbar-list li:hover {
+  background-color: #4a1667;
+}
+.navbar-container .navbar-box .navbar-list li:hover a {
+  color: #fff;
+}
+.navbar-container .navbar-toggle {
+  display: none;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 260px 30px;
+}
+.header-content {
+  position: relative;
+}
+.header h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #4a1667;
+  letter-spacing: 0.3px;
+}
+.header p {
+  font-size: 15px;
+  font-weight: 300;
+  color: #000;
+}
+.header img {
+  position: relative;
+  width: 250px;
+}
+.button {
+  position: relative;
+  padding: 12px 15px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.5s;
+  text-align: center;
+  color: #fff;
+}
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.button-purple {
+  position: relative;
+  background-color: #4a1667;
+  color: #fff;
+}
+.product {
+  position: relative;
+  width: 100%;
+}
+.product-content {
+  position: relative;
+  padding: 80px 30px;
+}
+.text-poppins {
+  font-family: "Poppins";
+}
+.text-purple {
+  color: #4a1667;
+}
+.card-custom {
+  position: relative;
+  width: 100%;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.card-custom .card-custom-header {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-color: #f3f3f3;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0.4px 3px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-custom .card-custom-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #4a1667;
+  z-index: -1;
+  transition: 0.5s;
+}
+.card-custom:hover .card-custom-header:before {
+  left: 0;
+}
+.card-custom .card-custom-header .img-custom {
+  position: relative;
+  width: 60%;
+}
+.card-custom .card-custom-body {
+  position: relative;
+  width: 100%;
+}
+.card-custom .card-custom-body h4 {
+  font-family: "Poppins";
+  font-size: 19px;
+  font-weight: bold;
+  color: #4a1667;
+}
+.footer {
+  position: relative;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+.footer .footer-content {
+  position: relative;
+  padding: 70px 30px 30px 30px;
+}
+@media screen and (max-width: 768px) {
+  .navbar-container .navbar-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0.3px 2px 3px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+  }
+  .navbar-container .navbar-box.active {
+    transform: translateX(0);
+  }
+  .navbar-container .navbar-box .navbar-list {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 70vh;
+    margin-top: 70px;
+  }
+  .navbar-container .navbar-box .navbar-list li {
+    text-align: left;
+    width: 100%;
+    padding: 15px 30px;
+  }
+  .navbar-container .navbar-box .navbar-list li a {
+    color: #000;
+    opacity: 0.7;
+    font-size: 14px;
+  }
+  .navbar-container .navbar-box .navbar-list li:hover a {
+    opacity: 1;
+  }
+  .navbar-container .navbar-toggle {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    margin: auto 0;
+  }
+  .navbar-container .navbar-toggle span {
+    width: 100%;
+    height: 4px;
+    background-color: #4a1667;
+    transition: 0.5s;
+  }
+  .navbar-container .navbar-toggle:before,
+  .navbar-container .navbar-toggle:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #4a1667;
+    transition: 0.5s;
+  }
+  .navbar-container .navbar-toggle:before {
+    top: 5px;
+    width: 55%;
+  }
+  .navbar-container .navbar-toggle:after {
+    bottom: 5px;
+    width: 70%;
+  }
+  .navbar-container .navbar-toggle.active span {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navbar-container .navbar-toggle.active:before {
+    width: 100%;
+    transform: translateY(6px) rotate(45deg);
+  }
+  .navbar-container .navbar-toggle.active:after {
+    width: 100%;
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  .header {
+    padding: 350px 30px;
+  }
+}
+.alert-costum{
+  background-color: #4a1667;
+}
